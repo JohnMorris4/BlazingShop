@@ -1,1 +1,1 @@
-# BlazingShop
+# Blazing Shop

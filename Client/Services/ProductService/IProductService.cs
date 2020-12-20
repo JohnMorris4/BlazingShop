@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using BlazorShopApp.Shared.Models;
 
 namespace BlazorShopApp.Client.Services.ProductService
@@ -7,8 +8,6 @@ namespace BlazorShopApp.Client.Services.ProductService
     {
         List<Product> Products { get; set; }
 
-        void LoadProducts()
-        {
-        }
+        Task LoadProducts();
     }
 }

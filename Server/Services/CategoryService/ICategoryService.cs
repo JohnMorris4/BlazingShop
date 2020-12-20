@@ -2,11 +2,10 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using BlazorShopApp.Shared.Models;
 
-namespace BlazorShopApp.Client.Services.CategoryService
+namespace BlazorShopApp.Server.Services.CategoryService
 {
     public interface ICategoryService
     {
-        List<Category> Categories { get; set; }
-        Task LoadCategories();
+        Task<List<Category>> GetCategories();
     }
 }
