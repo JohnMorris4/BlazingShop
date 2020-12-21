@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using BlazorShopApp.Shared.Models;
 
@@ -16,6 +17,11 @@ namespace BlazorShopApp.Server.Services.CategoryService
         public async Task<List<Category>> GetCategories()
         {
             return Categories;
+        }
+
+        public async Task<Category> GetCategoryByUrl(string categoryUrl)
+        {
+            return Categories.FirstOrDefault(c => c.Url.ToLower().Equals(categoryUrl.ToLower()));
         }
     }
 }
